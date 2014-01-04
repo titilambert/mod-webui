@@ -22,6 +22,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>{{title or 'No title'}}</title>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->

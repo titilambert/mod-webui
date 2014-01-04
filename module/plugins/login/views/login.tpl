@@ -2,16 +2,6 @@
 
 %from shinken.bin import VERSION
 
-<script type="text/javascript">
-// If we are a mobile device, go in the /mobile part :)
-$(document).ready(function(){
-  // jQuery.browser.mobile is filled by login/js/detectmobilebrowser.js
-  if($.browser.mobile){
-    window.location = '/mobile/';
-  }
-});
-</script>
-
 <div class="page-header">
   <h1>Shinken <small>v {{VERSION}}</small></h1>
 </div>
@@ -25,9 +15,8 @@ $(document).ready(function(){
       </div>
     </noscript>
 
-
     %if login_text:
-    <p class="lead">{{login_text}}</p>
+    <p class="lead visible-md visible-lg">{{login_text}}</p>
     %end
 
     %if error:
@@ -36,15 +25,9 @@ $(document).ready(function(){
       {{error}}
     </div>
     %end
-
-    <!-- <div>
-      <h2>Maintance News</h2>
-        <p>Todo import script?</p>
-    </div> -->
-
   </div>
 
-  <div class="col-xs-6 col-sm-4 col-md-4">
+  <div class="col-xs-12 col-sm-12 col-md-4">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">Login</h4>
@@ -65,7 +48,7 @@ $(document).ready(function(){
               </div>         
             </div>
             <div class="form-group pull-right">
-              <button class=" btn btn-success" type="submit" href="javascript: submitform()"><i class="icon-signin"></i> Login</button>
+              <button class="btn btn-success" type="submit" href="javascript: submitform()"><i class="icon-signin"></i> Login</button>
             </div>
           </fieldset>
         </form>
